@@ -6,7 +6,7 @@
   <artifactId>simple-service</artifactId>
   <version>0.0.1-SNAPSHOT</version>
   <packaging>jar</packaging>
-
+ 
   <name>Simple Service</name>
   <description>Simple Service</description>
 
@@ -15,8 +15,8 @@
     <artifactId>spring-boot-starter-parent</artifactId>
     <version>2.0.3.RELEASE</version>
     <relativePath/>
-  </parent>
-  <dependencies>
+  </parent>  
+  <dependencies> 
     <dependency>
       <groupId>org.springframework.boot</groupId>
       <artifactId>spring-boot-starter-web</artifactId>
