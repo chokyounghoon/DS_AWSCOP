@@ -1,0 +1,23 @@
+version:  '2'
+services:
+  database:
+    extends:
+      file: ../common/docker-compose.yml
+      service: database
+    environment:
+      POSTGRES_USER: "postgres"
+      POSTGRES_PASSWORD:  "1q2w3e"
+      POSTGRES_DB: "AWS_COP"
+  configserver:
+    extends:
+      file: ../common/docker-compose.yml
+      service: configserver
+  licensingservice:
+      image: ch3-thoughtmechanix/licensing-service
+      ports:
+        - "8088:8088"
+      environment:
+        PROFILE: "defualt"
+        CONFIGSERVER_URI: "http://configserver:8085"
+        CONFIGSERVER_PORT:   "8085"
+        DATABASESERVER_PORT: "5432"
